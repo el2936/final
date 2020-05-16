@@ -9,17 +9,17 @@ app = Flask(__name__)
 #static route
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template("index.html")
 
 #assignment page
 @app.route("/assignments")
 def assignments():
-    return "This is my assignment page"
+    return render_template("assignments.html")
 
-
+#classes page
 @app.route("/classes")
 def classes():
-    return "This is my classes page"
+    return render_template("classes.html")
 
 #start the server
 if __name__ == "__main__":
